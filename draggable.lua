@@ -8,7 +8,7 @@ function Draggable.move(dx, dy)
   if dragging then
     local start_x, start_y, display_index = love.window.getPosition()
     local display_w, display_h = love.window.getDesktopDimensions(display_index)
-    local win_w, win_h = love.graphics.getDimensions()
+    local win_w, win_h = love.window.getMode()
 
     -- prevent window from moving > 80% out of current display
     local minimum_x = -0.8 * win_w
